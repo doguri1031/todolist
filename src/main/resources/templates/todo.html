@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <form th:action="@{/todo/insert}" method="GET">
+        <table>
+            <tr>
+                <td colspan="3" style="border-bottom: 2pt solid  #8658ff; color: #8658ff; font-size:large;" >
+                    할일 등록
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" maxlength="15" name="todo_body" placeholder="할 일" /></td>
+                <td><input type="date" name="todo_date" placeholder="일정"></input></td>
+                <td><input type="submit" value="등록" /> </td>
+            </tr>    
+        </table>
+    </form> -->
+    <div class="container">
+        <table>
+            <tr>
+                <td width="150"style="border-bottom: 2pt solid  #8658ff; color: #8658ff; font-size:large;" >
+                    할일
+                </td>
+                <td width="150"style=";border-bottom: 2pt solid  #8658ff; color: #8658ff; font-size:large;">
+                    일정
+                </td>
+                <td width="150"style=";border-bottom: 2pt solid  #8658ff; color: #8658ff; font-size:large;">
+                    수정
+                </td>
+                <td width="150"style=";border-bottom: 2pt solid  #8658ff; color: #8658ff; font-size:large;">
+                    삭제
+                </td>
+            </tr>
+            <tr th:each ="todolist : ${todolist}">
+                
+                <td th:id="|${todolist.todo_no}_body|" th:text="${todolist.todo_body}"></td>
+                <td th:id="|${todolist.todo_no}_date|" th:text="${todolist.todo_date}"></td>
+                <td th:id="|${todolist.todo_no}_modify|"><a th:href="'javascript:modify(\'' + ${todolist.todo_no} + '\')'"><i class="fa fa-pencil"></i></a></td>
+                <td><a th:href="'javascript:deletetask(\'' + ${todolist.todo_no} + '\')'"><i class="fa fa-trash"></i></a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
