@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+</head>
+<body>
+	<h2>Index Page</h2>
+	<p th:if = "${successMsg}" th:text="${successMsg}"></p>
+	<p th:if = "${errorMsg}" th:text="${errorMsg}"></p>
+	<a th:href ="@{/user/signup}">Sign up</a>
+</body>
+</html>
