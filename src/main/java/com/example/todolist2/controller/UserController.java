@@ -41,7 +41,7 @@ public class UserController {
 		
 		}else {
 			session.setAttribute("userId", loginResult.getId());
-			mv.setViewName("index");
+			mv.setViewName("redirect:/todo/search");
 		}
 		
 		
