@@ -8,6 +8,16 @@
 	<h2>Index Page</h2>
 	<p th:if = "${successMsg}" th:text="${successMsg}"></p>
 	<p th:if = "${errorMsg}" th:text="${errorMsg}"></p>
-	<a th:href ="@{/user/signup}">Sign up</a>
+	<ul>
+		<li><a th:href ="@{/user/signup}">Sign up</a></li>
+		<li><a th:href ="@{/user/login}">Login</a></li>
+	</ul>
 </body>
+<style>
+	li {
+		list-style-type: none;
+	}
+</style>
+
 </html>
+

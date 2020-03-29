@@ -20,4 +20,12 @@ public class UserRepositoryImpl implements UserRepository {
 		
 		return signupResult;
 	}
+	
+	public UserDTO login(UserDTO user) {
+		
+		UserDTO loginResult = mapper.login(user);
+		
+		
+		return loginResult;
+	}
 }

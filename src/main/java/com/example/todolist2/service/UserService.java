@@ -6,4 +6,6 @@ public interface UserService {
 	
 	public boolean signup(UserDTO user);
 	
+	public UserDTO login(UserDTO user);
+	
 }

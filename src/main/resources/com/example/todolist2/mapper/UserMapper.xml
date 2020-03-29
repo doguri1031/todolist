@@ -10,4 +10,10 @@
 		VALUES (#{id}, #{password}, #{email})
 	</insert>
    
+   	<select id="login" resultType="userDTO">
+   		SELECT * FROM user
+   		WHERE id = #{id} AND password= #{password}
+   	</select>
+   
+   
 </mapper>

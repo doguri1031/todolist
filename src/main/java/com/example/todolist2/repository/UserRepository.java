@@ -6,4 +6,6 @@ public interface UserRepository {
 
 	public int signup(UserDTO user);
 	
+	public UserDTO login(UserDTO user);
+	
 }

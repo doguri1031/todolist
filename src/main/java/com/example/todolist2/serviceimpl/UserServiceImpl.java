@@ -25,5 +25,11 @@ public class UserServiceImpl implements UserService {
 		return true;
 	}
 	
-	
+	public UserDTO login(UserDTO user) {
+		
+		UserDTO loginResult = repository.login(user);
+		
+		
+		return loginResult;
+	}
 }

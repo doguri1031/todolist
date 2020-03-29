@@ -9,4 +9,6 @@ public interface UserMapper {
 
 	public int signup(UserDTO user);
 	
+	public UserDTO login(UserDTO user);
+	
 }
